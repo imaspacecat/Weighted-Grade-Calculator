@@ -2,9 +2,7 @@ class Subject{
 	String inputCat;
 	double inputWeight;
 	double inputGrade;
-	  
-
-
+	
 	public Subject(String inputCat, double inputWeight, double inputGrade){
 		this.inputCat = inputCat;
 	    this.inputWeight = inputWeight;
@@ -29,4 +27,3 @@ class Subject{
 	  }
 	  
 	}
-  

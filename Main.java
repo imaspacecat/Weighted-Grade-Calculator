@@ -6,16 +6,14 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
-
-
 public class Main extends Application{
 	String[] stringInput;
 	Subject[] subject = new Subject[10];
 	int i=0;
 	int userSize=0;
-  	public static void main(String[] args) {
+  	
+	public static void main(String[] args) {
   		Application.launch(args);
-
   	}
 
 @Override
@@ -39,13 +37,10 @@ public class Main extends Application{
 		Scene scene1 = new Scene(vBox1);
 		
 		primaryStage.setScene(scene1);
-		
 		primaryStage.show();
 				
-		
-		
 		button1.setOnAction(action -> {
-            text1.setText("Latest Input: " + textField1.getText());
+			text1.setText("Latest Input: " + textField1.getText());
             stringInput = textField1.getText().split(",", 0);
             subject[i]= new Subject(stringInput[0], Double.parseDouble(stringInput[1]), Double.parseDouble(stringInput[2]));
             userSize++;
@@ -58,7 +53,6 @@ public class Main extends Application{
 
 	  }
 
-
 	double calculate(Subject[] input){
 		double grade = 0;
 		for(int i=0; i<userSize; i++) {
@@ -67,12 +61,4 @@ public class Main extends Application{
 		
 		return grade/100;
 	}
-	
-	void getInput() {
-		
-	}
-	
-
-
-	
 }
