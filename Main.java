@@ -53,6 +53,7 @@ public class Main extends Application{
             i++;
         });
 		
+		//Prints the grade on the screen. I have to convert calculate(subject) to a String because setText() only accepts Strings.
 		button2.setOnAction(action -> {
             solution.setText("Grade: " + Double.toString(calculate(subject)) + "%");
         });
